@@ -11,9 +11,23 @@ export default function EmployeePage({employees}){
     // console.log(employees)
     const [currentEmployee, setCurrentEmployee] = useState({})
     
+    function phoneCode(number){
+        let phoneNum = number.split('')        
+        phoneNum.splice(3, 0, '-')
+        phoneNum.splice(7, 0, '-')
+        let newPhoneNum = phoneNum.join('')
+        
+        console.log(newPhoneNum)
+        return newPhoneNum
+    }
+
     function findEmployee(){       
 
         let thisEmployee = employees.find( (person) => person.name === name )
+
+        
+
+
         setCurrentEmployee(thisEmployee)
         console.log(currentEmployee)
     }
