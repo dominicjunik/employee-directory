@@ -8,20 +8,20 @@ import EmployeePage from "./pages/EmployeePage";
 
 export default function App() {
   //  let [employees, setEmployees] = useState(data);
-  let [employee, setEmployee] = useState(data);
+  // let [employee, setEmployee] = useState(data);
 
-  function addEmployee(emp) {
-    console.log(emp);
-    console.log(employee);
-    setEmployee([...employee, emp]);
-  }
+  // function addEmployee(emp) {
+  //   console.log(emp);
+  //   console.log(employee);
+  //   setEmployee([...employee, emp]);
+  // }
 
   return (
     
     <div className='app'>
       <Routes>
-        <Route path='/' element={<HomePage employee={employee} addEmployee={addEmployee} />} />
-        <Route path='/EmployeePage/:EmployeeName' element={<EmployeePage  employees={employee}/>} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/EmployeePage/:EmployeeName' element={<EmployeePage  />} />
       </Routes>
       
     </div>

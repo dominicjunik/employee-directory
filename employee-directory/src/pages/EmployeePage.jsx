@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import Header from "../components/Header"
+import { useEmployeeContext } from "../components/EmployeeContext"
 
 
 
-export default function EmployeePage({employees}){
+export default function EmployeePage(){
+
+    const { employee }= useEmployeeContext()
     const {EmployeeName: name} = useParams()
     
     console.log(name)
@@ -23,7 +26,7 @@ export default function EmployeePage({employees}){
 
     function findEmployee(){       
 
-        let thisEmployee = employees.find( (person) => person.name === name )
+        let thisEmployee = employee.find( (person) => person.name === name )
 
         
 

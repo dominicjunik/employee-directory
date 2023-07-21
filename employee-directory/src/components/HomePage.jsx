@@ -7,7 +7,7 @@ import DisplayForm from "./DisplayForm"
 
 import { useState } from "react";
 
-export default function HomePage({ employee, addEmployee }) {
+export default function HomePage() {
 
   const [isShown, setIsShown] = useState(false)
 
@@ -19,8 +19,8 @@ export default function HomePage({ employee, addEmployee }) {
     <div className="home-page">
       <Header header="Employee Directory" />
       <SearchBar />
-      <EmployeeList employee={employee} />
-      <DisplayForm addEmployee={addEmployee}/>     
+      <EmployeeList />
+      <DisplayForm />     
     </div>
   );
 }
