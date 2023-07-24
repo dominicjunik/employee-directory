@@ -9,7 +9,7 @@ export default function EmployeeList() {
   
   //function that returns a part of the state you want
   const { employeeList } = useSelector((state) => state.list)
-  const { filtered } = useSelector((state) => state.filter)
+  const { filtered, input } = useSelector((state) => state.filter)
 
   console.log(employeeList)
 
@@ -17,6 +17,7 @@ export default function EmployeeList() {
     localStorage.setItem('employeeList', JSON.stringify(employeeList))
   },[employeeList])
   
+  useEffect(()=>{console.log(input)},[input])
   // if searchbar input is not empty render search employee filtered list
   // else render the whole list
 if(filtered.length !== 0){
