@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { data }from "./data"
 
+
 const initialState = {
     employeeList: storedData()
 }
@@ -28,10 +29,18 @@ const listSlice = createSlice({
             let current = state.employeeList.findIndex((employee)=>employee.id === action.payload)
             state.employeeList.splice(current, 1)
             console.log(current)
+        },
+        searchEmployee: (state, action) => {
+            console.log(action.payload)
+            let foundPerson = state.employeeList.filter((employee, index)=>employee.name.toLowerCase().includes(action.payload.toLowerCase()))
+            console.log(foundPerson)
+            
+            // state.employeeList = foundPerson
         }
+
     }
 })
 
 export default listSlice.reducer
 
-export const { addEmployee, removeEmployee } = listSlice.actions
+export const { addEmployee, removeEmployee, searchEmployee } = listSlice.actions

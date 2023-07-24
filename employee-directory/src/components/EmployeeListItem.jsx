@@ -22,13 +22,4 @@ export default function EmployeeListItem({ title, name, headshot, id }) {
   // 
 
 
-  // return data.map((employee) => {
-  //   return (
-  //     <div key={employee.id}>
-  //       <img src={employee.headshot} alt={employee.name} />
-  //       <h3>{employee.name}</h3>
-  //       <p>{employee.title}</p>
-  //     </div>
-  //   );
-  // });
   

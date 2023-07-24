@@ -1,24 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import EmployeeListItem from "./EmployeeListItem";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 
 
 
-export default function EmployeeList() {
-  
+export default function EmployeeList() {  
 
-  // const { employee } = useEmployeeContext()
+  //function that returns a part of the state you want
   const { employeeList } = useSelector((state) => state.list)
+
   console.log(employeeList)
 
   useEffect(()=>{
     localStorage.setItem('employeeList', JSON.stringify(employeeList))
   },[employeeList])
   
-  
+  // if searchbar input is not empty render search employee filtered list
+  // else render the whole list
   return employeeList.map((employee, index) => {
     return (
       
