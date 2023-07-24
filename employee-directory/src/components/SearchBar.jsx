@@ -9,10 +9,10 @@ export default function SearchBar() {
   let dispatch = useDispatch()
   const { employeeList } = useSelector((state) => state.list)
   const { input } = useSelector((state) => state.filter)
-
+  useEffect(()=>{dispatch(setInput({input:''}))},[])
     function handleChange(event){
-      dispatch(setInput({input: event.target.value}))
-      // dispatch(searchEmployee({input: event.target.value, employeeList}))
+      dispatch(setInput({input:event.target.value}))
+      dispatch(searchEmployee({input: event.target.value, employeeList}))
     }
   // useEffect(() => {dispatch(searchEmployee({input, employeeList}))}, [input])
 

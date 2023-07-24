@@ -17,10 +17,10 @@ export default function EmployeeList() {
     localStorage.setItem('employeeList', JSON.stringify(employeeList))
   },[employeeList])
   
-  useEffect(()=>{console.log(input)},[input])
+  
   // if searchbar input is not empty render search employee filtered list
   // else render the whole list
-if(filtered.length !== 0){
+if(input.length !== 0){
   return filtered.map((employee, index) => {
     return (
       

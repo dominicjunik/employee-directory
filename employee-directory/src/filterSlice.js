@@ -17,7 +17,7 @@ const filteredList = createSlice({
 
             state.filtered = foundPerson
         },
-        setInput: (state, action) => state.input += action.payload.input
+        setInput: (state, action) => {state.input = action.payload.input}
     }
 })
 
