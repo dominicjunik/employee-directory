@@ -4,7 +4,7 @@ import {useState} from "react"
 
 export default function DisplayForm() {
     
-    const {addEmployee} = useEmployeeContext()
+    // const {addEmployee} = useEmployeeContext()
     const [isShown, setIsShown] = useState(false)
     
     function display() {
@@ -15,7 +15,7 @@ export default function DisplayForm() {
     return (
         <div>
             <button onClick={display}> {!isShown ? "Add Employee" : "Hide"}</button>
-            {isShown && <Form addEmployee={addEmployee} />}
+            {isShown && <Form />}
         </div>
 
         

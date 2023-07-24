@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import Header from "../components/Header"
-import { useEmployeeContext } from "../components/EmployeeContext"
+import { useSelector } from "react-redux"
 
 
 
 export default function EmployeePage(){
 
-    const { employee }= useEmployeeContext()
+    const { employeeList } = useSelector((state) => state.list)    
     const {EmployeeName: name} = useParams()
     
     console.log(name)
@@ -26,7 +26,7 @@ export default function EmployeePage(){
 
     function findEmployee(){       
 
-        let thisEmployee = employee.find( (person) => person.name === name )
+        let thisEmployee = employeeList.find( (person) => person.name === name )
 
         
 

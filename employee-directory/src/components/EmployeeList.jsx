@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from "react-redux";
 import { useEmployeeContext } from "./EmployeeContext";
 import EmployeeListItem from "./EmployeeListItem";
 import { Link } from "react-router-dom";
@@ -6,11 +7,11 @@ import { Link } from "react-router-dom";
 
 export default function EmployeeList() {
 
-  const { employee } = useEmployeeContext()
-
-  console.log(employee);
+  // const { employee } = useEmployeeContext()
+  const { employeeList } = useSelector((state) => state.list)
+  console.log(employeeList)
   
-  return employee.map((employee, index) => {
+  return employeeList.map((employee, index) => {
     return (
       <Link to={`/EmployeePage/${employee.name}`} className="list-box" key={employee.id}>
         <EmployeeListItem
@@ -23,3 +24,6 @@ export default function EmployeeList() {
     );
   });
 }
+
+
+// add useEffect here
