@@ -9,8 +9,9 @@ const filteredList = createSlice({
     initialState,
     reducers: {
         searchEmployee: (state, action) => {
+            console.log('hi')
             console.log(action.payload)
-            let foundPerson = state.employeeList.filter((employee, index)=>employee.name.toLowerCase().includes(action.payload.toLowerCase()))
+            let foundPerson = action.payload.employeeList.filter((employee, index)=>employee.name.toLowerCase().includes(action.payload.input.toLowerCase()))
             console.log(foundPerson)      
 
             state.filtered = foundPerson
