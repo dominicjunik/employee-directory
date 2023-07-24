@@ -7,7 +7,7 @@ export const data = [
       email: "billybob@gmail.com",
       headshot: "../images/headshot4.jpeg",
       borderColor: "red",
-      id: 1
+      id: "1"
     },
     {
       name: "Madison",
@@ -16,7 +16,7 @@ export const data = [
       email: "madtown@gmail.com",
       headshot: "../images/headshot2.jpeg",
       borderColor: "blue",
-      id: 2
+      id: "2"
     },
     {
       name: "Avery",
@@ -25,7 +25,7 @@ export const data = [
       email: "averyoftheavery@gmail.com",
       headshot: "../images/headshot1.jpeg",
       borderColor: "green",
-      id: 3
+      id: "3"
     }
   ];
   
