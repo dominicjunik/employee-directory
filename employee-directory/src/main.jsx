@@ -6,7 +6,6 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-
 import { store } from "./store";
 import { Provider } from "react-redux";
 

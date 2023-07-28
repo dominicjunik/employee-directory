@@ -8,13 +8,16 @@ const initialState = {
 
 function storedData(){    
         let storedData = localStorage.getItem('employeeList')
-        let storedDataParsed = JSON.parse(storedData)       
-        if(storedDataParsed.length === 0){
+        let storedDataParsed = JSON.parse(storedData)
+        console.log(storedDataParsed)       
+        if(storedDataParsed === null){
             console.log('inside the logic')
             return data
         }
         else {return storedDataParsed}
     }
+
+    
 
 
 const listSlice = createSlice({
