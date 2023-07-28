@@ -14,6 +14,10 @@ function storedData(){
             console.log('inside the logic')
             return data
         }
+        else if(storedDataParsed.length === 0){
+            console.log('inside the logic')
+            return data
+        }
         else {return storedDataParsed}
     }
 
